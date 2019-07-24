@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NETCorewithVueandPicnic1", "ASP.NETCorewithVueandPicnic1\ASP.NETCorewithVueandPicnic1.csproj", "{CB9A7916-7383-49C0-9D3E-604F76E86E03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicForm", "DynamicForm\DynamicForm.csproj", "{CB9A7916-7383-49C0-9D3E-604F76E86E03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

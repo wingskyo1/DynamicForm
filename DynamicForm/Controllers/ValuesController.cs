@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ASP.NETCorewithVueandPicnic1.Controllers
+namespace DynamicForm.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace ASP.NETCorewithVueandPicnic1.Extensions
+namespace DynamicForm.Extensions
 {
     public static class ServiceCollectionExtensions
     {

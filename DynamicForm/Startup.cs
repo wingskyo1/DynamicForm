@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ASP.NETCorewithVueandPicnic1.Extensions;
+using DynamicForm.Extensions;
 
-namespace ASP.NETCorewithVueandPicnic1
+namespace DynamicForm
 {
     public class Startup
     {

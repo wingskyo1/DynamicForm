@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ASP.NETCorewithVueandPicnic1.Providers;
+using DynamicForm.Providers;
 
-namespace ASP.NETCorewithVueandPicnic1.Controllers
+namespace DynamicForm.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

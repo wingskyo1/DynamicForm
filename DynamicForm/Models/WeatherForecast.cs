@@ -1,4 +1,4 @@
-namespace ASP.NETCorewithVueandPicnic1.Models
+namespace DynamicForm.Models
 {
     public class WeatherForecast
     {

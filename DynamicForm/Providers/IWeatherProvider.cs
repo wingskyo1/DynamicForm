@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ASP.NETCorewithVueandPicnic1.Models;
+using DynamicForm.Models;
 
-namespace ASP.NETCorewithVueandPicnic1.Providers
+namespace DynamicForm.Providers
 {
     public interface IWeatherProvider
     {
