@@ -32,9 +32,6 @@ namespace DynamicForm.Controllers
             var result = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
             
             
-            varxxx=3
-            var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;var aaa = 123;
-            
             var aaa = 123;
             
             
