@@ -30,6 +30,25 @@ namespace DynamicForm.Controllers
 
             var allForecasts = weatherProvider.GetForecasts();
             var result = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var a = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var b = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var c = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var d = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            
+            var e = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var f = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var g = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var h = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var i = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var j = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var k = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var l = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var m = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var n = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var o = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            var p = new {Total = allForecasts.Count, Forecasts = allForecasts.Skip(from).Take(quantity).ToArray()};
+            
+            
 
             return Ok(result);
         }
