@@ -338,4 +338,4 @@ ASALocalRun/
 .mfractor/
 *.DotSettings
 web/ClientApp/dist/
-ASP.NETCorewithVueandPicnic1/wwwroot/
+DynamicForm/wwwroot/
