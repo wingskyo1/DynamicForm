@@ -54,29 +54,29 @@
       console.log(JSON.stringify(this.data));
     },
     methods: {
-      genJson: function () {
-        const tmp = JSON.parse(JSON.stringify(this.data));
-        tmp.map(item => delete item.show);
-        this.textBox = JSON.stringify(tmp);
-      },
-      genReport: function (JsonString) {
-        // parse to JSON Object
-        let result = this.parseToObject(JsonString);
-        // if no err then set belong to
-        if (result) {
-          this.processBelongTo(result);
-        }
-      },
-      parseToObject: function (jsonString) {
-        try {
-          return JSON.parse(jsonString);
-        } catch (err) {
-          return false;
-        }
-      },
-      processBelongTo: function (data) {
-        data.map(function (element, index, array) {
-          if (element.belong) {
+            genJson: function () {
+              const tmp = JSON.parse(JSON.stringify(this.data));
+              tmp.map(item => delete item.show);
+              this.textBox = JSON.stringify(tmp);
+            },
+            genReport: function (JsonString) {
+              // parse to JSON Object
+              let result = this.parseToObject(JsonString);
+              // if no err then set belong to
+              if (result) {
+                this.processBelongTo(result);
+              }
+            },
+            parseToObject: function (jsonString) {
+              try {
+                return JSON.parse(jsonString);
+              } catch (err) {
+                return false;
+              }
+            },
+            processBelongTo: function (data) {
+              data.map(function (element, index, array) {
+                if (element.belong) {
             const sta = array.find((a) => a.id === element.belong);
             element.show = (sta.value === true);
           } else {
