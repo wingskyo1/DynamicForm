@@ -2,7 +2,7 @@
   <div class="page-title">
     <label>
       <input type="checkbox" v-model="data.value" @change="onChange">
-      <span class="checkable">{{data.displayName}} </span>
+      <span class="checkable">{{data.displayName}} ( {{data.id}} ) </span>
     </label>
   </div>
 </template>
