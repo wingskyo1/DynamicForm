@@ -43,11 +43,11 @@ namespace DynamicForm
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                if(config.Security.EnableHttps)
+                //if(config.Security.EnableHttps)
                     app.UseHsts();
             }
 
-            if(config.Security.EnableHttps)
+          //  if(config.Security.EnableHttps)
                 app.UseHttpsRedirection();
 
             app.UseStaticFiles();
@@ -71,7 +71,7 @@ namespace DynamicForm
             });
 
             appLifeTime.ApplicationStopping.Register(CleanUp);
-            Log.Information($"Test Project [{config.Deploy.Name}]");
+            Log.Information($"Test Project []");
         }
 
         private void CleanUp()
