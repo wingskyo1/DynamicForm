@@ -1,0 +1,33 @@
+version: "3"
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:latest
+    restart: always
+    environment:
+      SA_PASSWORD: "1q2wW@Q!"
+      ACCEPT_EULA: "Y"
+  web:
+    build: .
+    # Super important to make SSL work in production container
+    # http://parsstudent.com/asp-net-core-2-1-application-in-docker-with-https-enabled
+    environment:
+      # Without this, 'Failed to determine the https port for redirect.' thrown.
+      ASPNETCORE_HTTPS_PORT: "5001"
+      # Without this, Kestrel not listening https
+      ASPNETCORE_URLS: "https://+;http://+"
+      # Please switch to production valid certificate
+      Kestrel__Certificates__Default__Path: "/app/ssl/development_certificate.pfx"
+      # Do NOT check in password to source control
+      Kestrel__Certificates__Default__Password: 'your certificate password'
+    ports:
+      - "5000:80"
+      - "5001:443"
+    volumes:
+      - cpms:/app/other
+      # Map to your own preferred path
+      - /Users/Shared/cpms/logs:/app/logs
+      - /Users/Shared/cpms/ssl:/app/ssl
+    depends_on:
+      - db
+volumes:
+  cpms:

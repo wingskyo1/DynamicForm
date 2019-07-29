@@ -1,0 +1,4 @@
+# ignore these files and folders
+bin/
+obj/
+node_modules/
