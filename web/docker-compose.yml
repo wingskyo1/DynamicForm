@@ -23,11 +23,11 @@ services:
       - "5000:80"
       - "5001:443"
     volumes:
-      - cpms:/app/other
+      - dynamicForm:/app/other
       # Map to your own preferred path
-      - /Users/Shared/cpms/logs:/app/logs
-      - /Users/Shared/cpms/ssl:/app/ssl
+      - /Users/Shared/dynamicForm/logs:/app/logs
+      - /Users/Shared/dynamicForm/ssl:/app/ssl
     depends_on:
       - db
 volumes:
-  cpms:
+  dynamicForm:
