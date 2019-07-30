@@ -1,7 +1,10 @@
+using data;
 using DynamicForm.Helpers.Configuration;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
@@ -13,16 +16,17 @@ namespace DynamicForm
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private readonly IConfiguration _configuration;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddConfig(Configuration);
+            var configObject =  services.AddConfig(_configuration);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<ProjectContext>(opts => opts.UseSqlServer(configObject.Data.ConnectionString));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

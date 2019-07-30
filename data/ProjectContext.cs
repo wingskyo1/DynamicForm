@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore;
 using data.Entities;
 
 namespace data
 {
-    public class BaseContext : DbContext
+    public class ProjectContext : DbContext
     {
-        public BaseContext(DbContextOptions<BaseContext> options) : base(options)
+        public ProjectContext(DbContextOptions<ProjectContext> options) : base(options)
         {
             
         }
