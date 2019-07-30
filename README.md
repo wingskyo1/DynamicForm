@@ -5,7 +5,7 @@ Use Json or User Interface  to generate form
 
 ## Back End with Visual Studio 2017 up
 
-### setup
+### Setup
 ```
 Update-database -v  (/data)
 ```
@@ -20,15 +20,12 @@ Run
 ```
 Dotnet Run (/web)
 ```
-
-
-
-
+<br/><br/>
 
 
 ## Front End Only
 
-### setup
+### Setup
 ```
 npm install
 ```
