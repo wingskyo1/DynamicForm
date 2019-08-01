@@ -2,7 +2,7 @@
     <div class="page-title">
         <div v-for="item in data.displayName">
             <input type="radio" :id="item.name" :value="item.id" v-model="data.id">
-            <label :for="item.name">{{item.name}}</label>
+            <label :for="item.name">{{item.name}}( {{item.id}} ) </label>
         </div>
 
         <span>Picked: {{ data.value }}</span>
@@ -31,7 +31,7 @@
         },
         watch: {
             clonedItems: function (newVal, oldVal) {
-                console.log('New value: ' + newVal + ', Old value: ' + oldVal);
+                //console.log('New value: ' + newVal + ', Old value: ' + oldVal);
                 this.data.value = this.data.id;
                 this.$emit('onChange', newVal, true);
                 this.$emit('onChange', oldVal, false);

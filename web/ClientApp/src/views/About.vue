@@ -77,7 +77,6 @@
                 let result = this.parseToObject(JsonString);
                 //成功的話
                 if (result) {
-                    console.log(result);
                     this.processBelongTo(result);
                 }
             },
@@ -97,7 +96,8 @@
                         if (sta) {
                             element.show = (sta.value !== '');
                         }
-                        element.show = false;
+                        else
+                            element.show = false;
                     } else {
                         element.show = true;
                     }
@@ -108,7 +108,7 @@
             updateForm: function (id, value) {
                 this.data.map(function (element) {
                     if (element.belong === id) {
-                        console.log('update form',value);
+                        //console.log('update form',value);
                         element.show = value;
                     }
                 });
