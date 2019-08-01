@@ -61,9 +61,6 @@
             'createForm': createForm,
             radio,
         },
-        created() {
-            console.log(JSON.stringify(this.data));
-        },
         methods: {
             // 顯示問卷的Json
             genJson: function () {

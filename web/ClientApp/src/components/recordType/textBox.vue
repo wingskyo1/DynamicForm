@@ -12,15 +12,11 @@
         default: '填入答案區',
       },
       data: {
+        // id: '',
+        // type: 'textBox',
+        // displayName: '',
+        // value: '',
         type: Object,
-        default: () => {
-          return {
-            id: '',
-            type: 'checkBox',
-            displayName: '',
-            value: '',
-          };
-        },
       },
     },
   };

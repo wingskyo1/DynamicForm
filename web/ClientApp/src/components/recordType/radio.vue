@@ -4,8 +4,6 @@
             <input type="radio" :id="item.name" :value="item.id" v-model="data.id">
             <label :for="item.name">{{item.name}}( {{item.id}} ) </label>
         </div>
-
-        <span>Picked: {{ data.value }}</span>
     </div>
 </template>
 

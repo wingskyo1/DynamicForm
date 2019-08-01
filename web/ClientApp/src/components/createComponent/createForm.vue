@@ -14,8 +14,8 @@
             <div>
                 <select v-model="selectedType">
                     <option>Type</option>
-                    <option value="radio">單選題</option>
-                    <option value="checkBox">多選題</option>
+                    <option value="radio">Radio</option>
+                    <option value="checkBox">CheckBox</option>
                     <option value="textBox">TextBox</option>
                 </select>
             </div>
@@ -73,6 +73,9 @@
                     case 'radio':
                         this.fillRadio();
                         break;
+                    case 'textBox':
+                        this.fillTextBox();
+                        break;
                 };
                 console.log('顯示產生的問結構',this.data);
                 this.resetForm();
@@ -105,15 +108,22 @@
             },
             // Radio  = selectedType
             fillRadio: function () {
-                // const array = this.createRecord.map(item => {
-                //     return {name: item.name, value: item.id};
-                // });
-                // console.log('radio array');
-                // console.log(this.createRecord);
                 const object = {
                     id: this.IDGenerator(),
                     type: 'radio',
                     displayName: this.createRecord,
+                    value: '',
+                    belong: this.belongTo,
+                    show: true,
+                };
+                this.data.push(object);
+            },
+            // TextBox = selectedType
+            fillTextBox: function () {
+                const object = {
+                    id: this.IDGenerator(),
+                    type: 'textBox',
+                    displayName:'',
                     value: '',
                     belong: this.belongTo,
                     show: true,
