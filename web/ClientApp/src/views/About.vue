@@ -7,8 +7,7 @@
                 <div>
                     <textarea v-model="jsonBox" cols="70" rows="10"></textarea>
                 </div>
-
-                <!--<radio></radio>-->
+                
                 <button @click="genReport(jsonBox)">產生問卷</button>
                 <button @click="genJson()">獲取Json</button>
                 <!--自訂選擇區塊-->
@@ -42,6 +41,7 @@
     import question from '../components/recordType/question.vue';
     import textBox from '../components/recordType/textBox.vue';
     import radio from '../components/recordType/radio';
+    import dropDown from '../components/recordType/dropDown';
     import createForm from '../components/createComponent/createForm.vue';
 
     export default {
@@ -60,6 +60,7 @@
             'textBox': textBox,
             'createForm': createForm,
             radio,
+            dropDown,
         },
         methods: {
             // 顯示問卷的Json

@@ -35,6 +35,7 @@
     <Content Include="ClientApp\src\components\createComponent\createForm.vue" />
     <Content Include="ClientApp\src\components\createComponent\createInput.vue" />
     <Content Include="ClientApp\src\components\recordType\checkBox.vue" />
+    <Content Include="ClientApp\src\components\recordType\dropDown.vue" />
     <Content Include="ClientApp\src\components\recordType\question.vue" />
     <Content Include="ClientApp\src\components\recordType\radio.vue" />
     <Content Include="ClientApp\src\components\recordType\textBox.vue" />

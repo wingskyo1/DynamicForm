@@ -14,7 +14,7 @@
                 type: Object,
                 default: () => {
                     return {
-                        id: 'qweqweqweqweqw',
+                        id: '',
                         type: 'radio',
                         displayName: [{name: 'one', id: '1'}, {name: 'two', id: '2'}, {name: 'aaa', id: '3'}],
                         //value: ,

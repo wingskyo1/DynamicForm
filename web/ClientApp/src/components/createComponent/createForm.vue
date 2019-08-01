@@ -17,6 +17,7 @@
                     <option value="radio">Radio</option>
                     <option value="checkBox">CheckBox</option>
                     <option value="textBox">TextBox</option>
+                    <option value="dropDown">DropDown</option>
                 </select>
             </div>
 
@@ -76,6 +77,9 @@
                     case 'textBox':
                         this.fillTextBox();
                         break;
+                    case 'dropDown':
+                        this.fillDropDown();
+                        break;
                 };
                 console.log('顯示產生的問結構',this.data);
                 this.resetForm();
@@ -124,6 +128,17 @@
                     id: this.IDGenerator(),
                     type: 'textBox',
                     displayName:'',
+                    value: '',
+                    belong: this.belongTo,
+                    show: true,
+                };
+                this.data.push(object);
+            },
+            fillDropDown: function () {
+                const object = {
+                    id: this.IDGenerator(),
+                    type: 'dropDown',
+                    displayName:this.createRecord,
                     value: '',
                     belong: this.belongTo,
                     show: true,
