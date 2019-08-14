@@ -1,4 +1,5 @@
 using System.Text;
+using System.Threading.Tasks;
 using data;
 using DynamicForm.Helpers.Configuration;
 using DynamicForm.Helpers.Extension.StartUp;
@@ -51,6 +52,19 @@ namespace DynamicForm
                             ValidateLifetime = true,
                             ValidateIssuerSigningKey = true,
                             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("1234567812345678"))
+                        };
+                        // Not sure need or not
+                        options.Events = new JwtBearerEvents
+                        {
+                            OnAuthenticationFailed = context =>
+                            {
+                                // add info to header if expired
+                                if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                                {
+                                    context.Response.Headers.Add("Token-Expired", "true");
+                                }
+                                return Task.CompletedTask;
+                            }
                         };
                     });
 
